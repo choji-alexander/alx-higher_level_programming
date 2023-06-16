@@ -1,17 +1,22 @@
 #!/usr/bin/python3
+"""Define a class Square."""
 
 class Square:
+    """Represent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
+        """Initialize a new square"""
         self.size = size
         self.position = position
 
     @property
     def size(self):
+        """Get/set the current size of the square."""
         return self.__size
 
     @size.setter
     def size(self, size):
+        """get size of he square"""
         if type(size) != int:
             raise TypeError("size must be an integer")
         if size < 0:
@@ -19,4 +24,5 @@ class Square:
         self.__size = size
 
     def area(self):
+        """Return the current area of the square."""
         return (self.size * self.size)
